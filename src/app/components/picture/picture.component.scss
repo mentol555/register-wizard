@@ -1,0 +1,75 @@
+.pictureroot{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.preview{
+    position: absolute;
+    height: 13vw;
+    width: 13vw;
+    top: 20vh;
+    margin-left:50%;
+    transform: translate(-50%, 0);
+    border: 2px solid white;
+    border-radius: 100%;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    clip-path: circle();
+}
+
+.input{
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+
+}
+input[type=file]::file-selector-button {
+    cursor: pointer;
+    color: transparent;
+    position: absolute;
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+input{
+    color: transparent;
+}
+.nextButton{
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.skipButton{
+    position: absolute;
+    left: 40%;
+    bottom: 3%;
+    width: 15%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.backButton{
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
+    width: 20%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.infoicon{
+    position: absolute;
+    display: flex;
+    top: 10%;
+    align-items: center;
+    margin-left: 50%;
+    transform: translate(-50%,0);
+    color: rgb(0, 225, 255);
+}

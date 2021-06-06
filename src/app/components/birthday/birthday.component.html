@@ -1,0 +1,35 @@
+<div class="birthdayroot">
+    <mat-form-field appearance="fill">
+        <mat-label color="">Country of Birth</mat-label>
+        <mat-select [(ngModel)]="selectedCountry"  #country>
+            <mat-option *ngFor="let country of countries" [value]="country">
+                {{country}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="requiredicon" *ngIf="!country.value">
+        <mat-icon>warning</mat-icon> Missing data
+    </div>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Set your birthday</mat-label>
+        <input #date matInput [matDatepicker]="dp3" (dateChange)="updateBirthdate($event.value)" disabled>
+        <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+    <div class="requiredicon" *ngIf="!date.value">
+        <mat-icon>warning</mat-icon> Missing data
+    </div>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+            class="nextButton"
+            (click)="nextStep()">
+            Next
+    </button>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+            class="backButton"
+            (click)="backStep()">
+            Previous
+    </button>
+</div>

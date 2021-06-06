@@ -1,0 +1,23 @@
+.finalroot{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.mainpageButton{
+    text-transform: uppercase;
+    position: absolute;
+    left: 10%;
+    top: 55%;
+    width: 35%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.myprofileButton{
+    text-transform: uppercase;
+    position: absolute;
+    right: 10%;
+    top: 55%;
+    width: 35%;
+    border: 2px solid white;
+    border-radius: 1em;
+}

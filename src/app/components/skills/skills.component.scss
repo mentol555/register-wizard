@@ -1,0 +1,152 @@
+.skillsroot{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.addButton{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.langs{
+    display: flex;
+    flex-direction: column;
+}
+.inline{
+    width: 40% !important;
+}
+.matdivider{
+    margin-top: 2%;
+    border-top: 2px solid white;
+    padding: 0.8%;
+}
+#matdivider1::after {
+    content: "Choose your skills";
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#matdivider2::after {
+    content: "Add your language skills";
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#matdivider3::after {
+    content: "Add your Driver License(s)";
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.lvl{
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-left: 9%;
+    color: white;
+}
+
+.nextButton{
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.backButton{
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.skipButton{
+    position: absolute;
+    left: 40%;
+    bottom: 3%;
+    width: 15%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+::ng-deep .skillform{
+    width: 50% !important;
+    margin-left: 5% !important;
+    margin-top: 2% !important;
+
+}
+::ng-deep .mat-form-field{
+    width: 50%;
+    margin-left: 5% !important;
+    margin-top: 1% !important;
+}
+::ng-deep .mat-form-field-flex{
+    background-color: #333333 !important;
+}
+::ng-deep .mat-select-panel {
+    background: #313131;
+}
+::ng-deep .mat-option, ::ng-deep .mat-select-value, ::ng-deep .mat-select-arrow{
+    color: white !important;
+}
+::ng-deep .mat-form-field-underline::before {
+    background-color: none !important;
+}
+::ng-deep .mat-select-placeholder, mat-label{
+    color: #828282 !important;
+}
+::ng-deep{
+    .mat-slider.mat-slider-horizontal .mat-slider-wrapper {
+        top: 18px;
+      }
+      .mat-slider.mat-slider-horizontal .mat-slider-track-wrapper {
+        height: 12px;
+        border-radius: 10px
+      }
+      .mat-slider.mat-slider-horizontal .mat-slider-track-background,
+      .mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+        height: 100%;
+      }
+      .mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+        background-color: blue;
+      }
+      .mat-accent .mat-slider-thumb {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        border: solid 2px gray;
+        bottom: -20px;
+        right: -20px;
+      }
+      .mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+        background-color: white;
+      }
+      .mat-slider{
+        width: 30%;
+        height: 4px;
+    }
+    .mat-slider-horizontal, .mat-slider-wrapper {
+        height: 2px;
+        top: 20% !important;
+        left: 5%;
+        right: 8px;
+    }
+    .mat-slider[_ngcontent-and-c132]{
+        height: 5%;
+    }
+    .mat-fab .mat-button-wrapper {
+        padding: 0 !important;
+        display: inline-block;
+        line-height: 24px;
+    }
+}

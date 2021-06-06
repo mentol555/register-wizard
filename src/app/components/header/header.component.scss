@@ -1,0 +1,22 @@
+#headerdiv{
+    width: 90%;
+    height: 100%;
+    margin-left: 3%;
+    margin-right: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    color: white;
+    font-size: 21px;
+    font-family: Roboto;
+    & .arrow{
+        font-size: 50px !important;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
+
+}
+.invisible{
+    visibility: hidden;
+}
+

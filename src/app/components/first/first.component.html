@@ -1,0 +1,32 @@
+<div class="first">
+    <div>
+        <form>
+            <mat-form-field appearance="fill">
+            <mat-label color="">Language</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="language" >
+                <mat-option *ngFor="let lang of languages" [value]="lang">
+                    {{lang}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+        </form>
+    </div>
+    <div>
+        <form>
+            <mat-form-field appearance="fill">
+            <mat-label color="">Time Zone</mat-label>
+            <mat-select [(ngModel)]="selectedZone" name="zone">
+                <mat-option *ngFor="let zone of timezones" [value]="zone">
+                    {{zone}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+            <h3 style="margin-left: 10%; color: white;"><em>Current Time: {{time | date:'longTime'}}</em></h3>
+        </form>
+    </div>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+            class="registerButton"
+            (click)="startRegistration()">
+            Start</button>
+</div>

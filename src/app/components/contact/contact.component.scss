@@ -1,0 +1,85 @@
+.contactroot{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: auto;
+}
+.socials{
+    position: relative;
+    margin-left: 25%;
+    margin-top: 10px;
+    width: 50%;
+}
+.phone{
+    margin-top: 5%;
+}
+.addButton{
+    width: 2vw;
+    height: 2vw;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+.nextButton{
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.backButton{
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+#matdivider{
+    border-top: 2px solid white;
+    padding: 0.8%;
+}
+#matdivider::after {
+    content: "Add your social accounts";
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px !important;
+}
+::ng-deep .mat-accordion{
+    margin-bottom: 3px !important;
+    border-radius: 0% !important;
+}
+::ng-deep .mat-expansion-panel-body{
+    padding: 0px !important;
+}
+::ng-deep .mat-form-field{
+    margin-top: 4% !important;
+}
+::ng-deep .mat-expansion-panel{
+    border: 1px solid white;
+    border-radius: 0%;
+    background-color: #333333;
+}
+::ng-deep .mat-expansion-panel-header-title {
+    color: white;
+}
+::ng-deep .mat-fab .mat-button-wrapper {
+    padding: 0;
+    display: inline-block;
+    line-height: 24px;
+}

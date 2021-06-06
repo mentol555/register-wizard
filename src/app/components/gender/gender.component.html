@@ -1,0 +1,22 @@
+<div class="genderroot">
+    <div class="infoicon">
+        <mat-icon>info</mat-icon> Please select your gender.
+    </div>
+    <div class="flexcontainer">
+        <button mat-fab id="male" class="gender" (click)="selectGender('male')"></button>
+        <button mat-fab id="female" class="gender" (click)="selectGender('female')"></button>
+        <button mat-fab id="other" class="gender" (click)="selectGender('other')">Other / <br> Prefer not to say</button>
+    </div>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+            class="nextButton"
+            (click)="nextStep()">
+            Next
+    </button>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+            class="backButton"
+            (click)="backStep()">
+            Previous
+    </button>
+</div>

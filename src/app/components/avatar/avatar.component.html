@@ -1,0 +1,35 @@
+<div class="rootavatar">
+    <div class="infoicon">
+        <mat-icon>info</mat-icon> Please select your avatar.
+    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td><button mat-fab id="first" class="avatar" (click)="selectAvatar(1)"></button></td>
+                <td><button mat-fab id="second" class="avatar" (click)="selectAvatar(4)"></button></td>
+            </tr>
+            <tr>
+                <td><button mat-fab id="third" class="avatar" (click)="selectAvatar(3)"></button></td>
+                <td><button mat-fab id="fourth" class="avatar" (click)="selectAvatar(2)"></button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+            class="nextButton"
+            (click)="nextStep()">
+            Next
+    </button>
+    <button mat-button 
+                [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+                class="skipButton"
+                (click)="skip()">
+                Skip
+    </button>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+            class="backButton"
+            (click)="backStep()">
+            Previous
+    </button>
+</div>

@@ -1,0 +1,31 @@
+<div class="pictureroot">
+    <div class="preview">
+        <div class="img" [style.background-image]="'url(' + pictureUrl + ')'" style="background-size: 13vw; background-repeat: no-repeat;">
+        </div>
+        <div class="input">
+            <input type="file" value="" name="myImage" accept="image/png, image/gif, image/jpeg" (change)="onFileSelected($event)">
+        </div>
+    </div>
+    <div class="infoicon">
+        <mat-icon>info</mat-icon> Please upload a profile picture.
+    </div>
+    <button mat-button 
+                [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+                class="nextButton"
+                (click)="nextStep()">
+                Next
+    </button>
+    <button mat-button 
+                [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+                class="skipButton"
+                (click)="skip()">
+                Skip
+    </button>
+    <button mat-button 
+                [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+                class="backButton"
+                (click)="backStep()">
+                Previous
+    </button>
+</div>
+ 

@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "9163d985-f368-4293-9a1f-cd6053c508ce"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -95,7 +98,6 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [

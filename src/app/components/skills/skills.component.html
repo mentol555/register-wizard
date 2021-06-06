@@ -1,0 +1,78 @@
+<div class="skillsroot">
+<form [formGroup]="myForm">
+    <mat-divider class="matdivider" id="matdivider1"></mat-divider>
+    <div formArrayName="skills">
+        <div *ngFor="let skill of skillForms.controls; let i=index" [formGroupName]="i">
+            <mat-form-field appearance="fill" class="skillform">
+                <mat-label color="">Skill</mat-label>
+                <mat-select formControlName="skillname">
+                    <mat-option *ngFor="let skl of skls" [value]="skl">
+                        {{skl}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-slider
+                class="slider"
+                [disabled]="false"
+                [invert]="false"
+                [max]=7
+                [min]=0
+                [step]=1
+                [tickInterval]=1
+                [vertical]="false"
+                formControlName="skilllevel">
+            </mat-slider>
+            <span class="lvl">{{skillForms.at(i).get('skilllevel')?.value}}</span>
+        </div>
+    </div>
+    <button mat-fab (click)="addSkill()" class="addButton" *ngIf="this.skillForms.length < 3"><mat-icon>add</mat-icon></button>
+    <mat-divider class="matdivider" id="matdivider2"></mat-divider>
+    <div formArrayName="languages" class="langs">
+        <div *ngFor="let language of languageForms.controls; let i=index" [formGroupName]="i">
+            <mat-form-field appearance="fill" class="inline">
+                <mat-label color="">Language</mat-label>
+                <mat-select formControlName="langname">
+                    <mat-option *ngFor="let lang of langs" [value]="lang">
+                        {{lang}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="inline">
+                <mat-label color="">Level</mat-label>
+                <mat-select formControlName="langlevel">
+                    <mat-option *ngFor="let level of levels" [value]="level">
+                        {{level}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <button mat-fab (click)="addLanguage()" class="addButton" *ngIf="this.languageForms.length < 3"><mat-icon>add</mat-icon></button>
+    <mat-divider class="matdivider" id="matdivider3"></mat-divider>
+    <mat-form-field appearance="fill">
+        <mat-label>License</mat-label>
+        <mat-select formControlName="licenses" multiple>
+          <mat-option *ngFor="let lic of licenselist" [value]="lic">{{lic}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>
+<button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+            class="nextButton"
+            (click)="nextStep()">
+            Next
+    </button>
+<button mat-button 
+                [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+                class="skipButton"
+                (click)="skip()">
+                Skip
+    </button>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+            class="backButton"
+            (click)="backStep()">
+            Previous
+</button>
+</div>
+

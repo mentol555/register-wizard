@@ -1,0 +1,12 @@
+<div id="headerdiv">
+    <mat-icon class="arrow" 
+            (click)="clickArrowLeft()"
+            [ngClass]="{'invisible': toShow===8}"
+            [ngStyle]="{'color': toShow === 0 ? '#424242' : 'white'}"
+            >keyboard_arrow_left</mat-icon>
+    {{title}}
+    <mat-icon class="arrow" 
+            [ngClass]="{'invisible': toShow === 8}"
+            style="color: white"
+            (click)="clickArrowRight()" >keyboard_arrow_right</mat-icon>
+</div>

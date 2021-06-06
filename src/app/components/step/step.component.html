@@ -1,0 +1,11 @@
+<div class="rootstep" *ngIf="actual" >
+    <div class="step"
+        *ngFor="let step of steps"
+        [ngStyle]="{'color':step.id === actual ? 'white' : 'black'}">
+        <div class="numer"
+            [ngClass]="{'actualstep': step.id === actual, 'donestep' : step.id < actual}">
+            <span *ngIf="step.id >= actual">{{step.id}}</span>
+            <mat-icon *ngIf="step.id < actual" style="color: white">check</mat-icon>
+        </div> <span style="color: #4f4f4f">{{step.value}}</span>
+    </div>
+</div>

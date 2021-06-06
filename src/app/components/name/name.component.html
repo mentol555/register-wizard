@@ -1,0 +1,41 @@
+<div class="nameroot">
+    <mat-form-field>
+        <mat-label>Full Name</mat-label>
+        <input
+        #name = "ngModel"
+        [(ngModel)]="nameInput"
+        name = "name"
+        [value] = "name"
+        matInput placeholder="ex. Kiss Sandor" required>
+        <mat-error>
+        Name is required!
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Accost name</mat-label>
+        <input
+        #accostname = "ngModel"
+        [(ngModel)] = "accostNameInput"
+        name = "accostname"
+        matInput placeholder="ex. Sandor" required>
+        <mat-error>
+        Accost name is required!
+        </mat-error>
+    </mat-form-field>
+    <div class="infoicon">
+        <mat-icon>info</mat-icon><em>Really important for smooth work.</em>
+    </div>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+            class="nextButton"
+            (click)="nextStep()">
+            Next
+    </button>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+            class="backButton"
+            (click)="backStep()">
+            Previous
+    </button>
+    
+</div>

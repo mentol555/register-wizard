@@ -1,0 +1,76 @@
+.rootavatar{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.infoicon{
+    position: absolute;
+    display: flex;
+    top: 5%;
+    align-items: center;
+    margin-left: 50%;
+    transform: translate(-50%,0);
+    color: rgb(0, 225, 255);
+}
+
+table{
+    position: absolute;
+    top: 15%;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    height: 25vw;
+    width: 25vw;
+}
+
+.avatar{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    height: 80%;
+    clip-path: circle();
+}
+
+#first{
+    background-image: url("/assets/avatar.png");
+}
+#second{
+    background-image: url("/assets/avatar4.png");
+}
+#third{
+    background-image: url("/assets/avatar3.png");
+}
+#fourth{
+    background-image: url("/assets/avatar2.png");
+}
+td{
+    text-align: center; 
+    vertical-align: middle;
+}
+.avatar:focus{ width: 99%; height: 99%; }
+
+.nextButton{
+    right: 5%;
+    bottom: 3%;
+    position: absolute;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.backButton{
+    left: 5%;
+    bottom: 3%;
+    position: absolute;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+
+.skipButton{
+    position: absolute;
+    left: 40%;
+    bottom: 3%;
+    width: 15%;
+    border: 2px solid white;
+    border-radius: 1em;
+}

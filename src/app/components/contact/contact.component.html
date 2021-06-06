@@ -1,0 +1,86 @@
+<div class="contactroot">
+    <mat-form-field 
+        *ngFor="let phone of phonenrs; let i = index; trackBy:trackByFn"
+        class="phone">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="Ex. (+36) 30/123-4567"  mask="(+00) 00/000-0000" value="" [(ngModel)]="phonenrs[i]" required/>
+    </mat-form-field>
+    
+    <button mat-fab id="anotherPhone" (click)="anotherPhone()" class="addButton"><mat-icon>add</mat-icon></button>
+
+    <form class="example-form">
+        <mat-form-field class="phone">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" [(ngModel)]="email">
+        </mat-form-field>
+    </form>
+    <mat-divider id="matdivider"></mat-divider>
+<div class="socials">
+      <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header expandedHeight="30px">
+            <mat-panel-title>
+              Facebook
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <mat-label>facebook.com/</mat-label>
+            <input matInput [(ngModel)]="facebook">
+          </mat-form-field>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header expandedHeight="30px">
+            <mat-panel-title>
+              Instagram
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <mat-label>instagram.com/</mat-label>
+            <input matInput [(ngModel)]="instagram">
+          </mat-form-field>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header expandedHeight="30px">
+            <mat-panel-title>
+              LinkedIn
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <mat-label>linkedin.com/</mat-label>
+            <input matInput [(ngModel)]="linkedin" >
+          </mat-form-field>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header expandedHeight="30px">
+            <mat-panel-title>
+              Twitter
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <mat-label>twitter.com/</mat-label>
+            <input matInput [(ngModel)]="twitter">
+          </mat-form-field>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+<div class="buttons">
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'blue'}" 
+            class="nextButton"
+            (click)="nextStep()">
+            Next
+    </button>
+    <button mat-button 
+            [ngStyle]="{'color':'white', 'background-color':'#333333'}" 
+            class="backButton"
+            (click)="backStep()">
+            Previous
+    </button>
+</div>
+</div>
